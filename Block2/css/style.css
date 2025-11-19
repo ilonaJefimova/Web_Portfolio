@@ -1,0 +1,25 @@
+/* =============================
+   Sushi Site
+   Version 2.0 (2021-08-14)
+   Author:
+============================== */
+
+body {
+    background-color: #f8f9fa;
+}
+
+.card-img-wrapper {
+    height: 300px !important;
+    object-fit: cover; 
+    border-bottom: 1px solid #eee;
+}
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-body {
+    min-height: 160px;
+}
+
