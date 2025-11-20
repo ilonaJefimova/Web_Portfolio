@@ -22,29 +22,53 @@ Main Page
 
 The main page acts as a hub where users can select which portfolio section to explore.
 Landing page with 4 clickable blocks linking to different portfolio projects.
+
 <img width="1291" height="804" alt="image" src="https://github.com/user-attachments/assets/1b78d608-4f71-4201-82db-e903c89d9232" />
 
+
+
 Portfolio Sections
+
+
 Block 1 – Basic Dynamic Website
+
 Description:
+
 .......
+
 Pages in this Block:
+
 .....
+
 
 Block 2 – Selling Site
+
 Description:
+
 .......
+
 Pages in this Block:
+
 .....
+
 
 Block 3 – IoT Site
+
 Description:
+
 .......
+
 Pages in this Block:
+
 .....
 
+
 Block 4 – XML Elements
+
 Description:
+
 .......
+
 Pages in this Block:
+
 .....
