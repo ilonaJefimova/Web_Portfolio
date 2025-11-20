@@ -1,0 +1,116 @@
+/* =============================
+   Login
+   Version 2.0 (2021-11-18)
+   Author:
+============================== */
+
+/* Modal base */
+.modal-custom {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
+
+/* Show modal */
+.modal-custom.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content-custom {
+    background: linear-gradient(180deg, #ffffff, #f6f7fb);
+    padding: 2rem 2.2rem;
+    border-radius: 18px;
+    width: 92%;
+    max-width: 420px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.30);
+    position: relative;
+    animation: slideUp 0.35s ease;
+}
+
+/* Close button */
+.modal-content-custom .close {
+    position: absolute;
+    right: 1.2rem;
+    top: 1rem;
+    font-size: 1.4rem;
+    color: #6c757d;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.modal-content-custom .close:hover {
+    color: #dc3545;
+}
+
+/* Avatar */
+.modal-avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.modal-avatar img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 3px solid #6a11cb;
+    object-fit: cover;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+/* Inputs */
+.modal-content-custom input {
+    width: 100%;
+    padding: 0.85rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccd1d7;
+    border-radius: 10px;
+    color: #212529;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    background: #f8f9fa;
+}
+
+.modal-content-custom input:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.25);
+}
+
+.modal-content-custom button {
+    padding: 0.9rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    border: none;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.modal-content-custom button:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+}
+
+#message {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #6c757d;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
