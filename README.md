@@ -486,6 +486,14 @@ This allows users to:
 
 ---
 
+## 🔄 Data Flow Overview
+
+✔ IoT Device → Sends temperature & LED status → MySQL Database
+✔ Website → Requests data & displays in tables and graphs
+✔ User → Can send LED ON/OFF commands → Device executes and returns success
+
+---
+
 ### 💡 Technologies Used in Block 3
 
 * PHP
@@ -500,15 +508,134 @@ This allows users to:
 
 ---
 
-# 🟨 Block 4 – XML Elements
+# 🟨 Block 4 – XML / XSL Data Presentation
 
-📌 **Description ()**
+📌 **This project demonstrates how data stored in a traditional MySQL database can be displayed on the website using XML + XSL transformation, along with a dynamic weather panel.**
 
-.......
+📸 Screenshot:
 
-### 📄 Pages Include
+<img width="964" height="887" alt="image" src="https://github.com/user-attachments/assets/4aca71d1-9c84-4554-93a8-78c7789de37a" />
 
-.....
+---
+
+## 🧠 Project Concept
+
+Block 4 stores all data in MySQL normally, but the frontend output is generated using:
+
+* **XML documents**  
+* **XSL stylesheets**  
+
+The website dynamically converts database data to XML, applies an XSL transformation, and displays the formatted output in the browser.
+
+Additionally, a **Weather Panel** fetches live data from a weather API, connected to the same city as the news/cards.
+
+Users can also view the raw formatted XML/XSL data via an **RSS-style icon**.
+
+---
+
+## 📄 Features in Block 4
+
+---
+
+### 1️⃣ Weather Panel
+
+Displays current weather information fetched via a **Weather API** for the city corresponding to the news/cards.  
+
+Information shown in a user-friendly format:
+
+* Weather icon  
+* Current temperature  
+* Weather description (e.g., Clear, Cloudy)  
+* Feels Like temperature  
+* Humidity  
+* Pressure  
+* Wind speed/direction  
+* Sunrise time  
+* Sunset time
+
+📸 Screenshot:
+
+<img width="900" height="219" alt="image" src="https://github.com/user-attachments/assets/af6b52b2-7699-444d-bef7-4c46d6d95df9" />
+
+
+### 2️⃣ Main Page Output – News / Cards
+
+The homepage shows the **last 6 added news/items**, each displayed as a “card” through XSL formatting.
+
+Each card includes:
+
+* Image  
+* Description (first **100 characters**)  
+* “Read More” link leading to a detailed page
+
+📸 Screenshot:
+
+<img width="940" height="853" alt="image" src="https://github.com/user-attachments/assets/d6cdc705-2d73-4f8c-8b87-f7b2eb8dcb6a" />
+
+---
+
+### 3️⃣ View as XSL / RSS
+
+A small RSS-style button is available. Clicking it:
+
+* Opens a page showing all database data rendered in **pure XSL format**  
+* Provides a structured XML feed for debugging or external consumption
+
+📸 Screenshot:
+
+<img width="332" height="71" alt="image" src="https://github.com/user-attachments/assets/ddd8b71c-7aad-4f49-9e2c-74036091d1de" />
+
+---
+
+### 4️⃣ Login Access (Admin Only)
+
+A login button is visible to all users, but:
+
+✔ Registration is disabled  
+✔ Only pre-existing admin accounts can access  
+✔ Unauthorized users cannot reach the dashboard
+
+Login and admin panel behave the same as in **Block 2**, except:
+
+* CRUD operations are rendered using XSL templates
+
+---
+
+### 5️⃣ Admin Dashboard (XSL-based CRUD)
+
+Authorized admins can:
+
+* Add new item  
+* Edit existing item  
+* Delete item  
+* View all records  
+
+All pages are styled using **XSL templates** rather than direct PHP views.
+
+Benefits:
+
+✔ All data flows through XML  
+✔ Frontend layout controlled entirely in XSL  
+✔ Clean MVC + XML layered approach
+
+📸 Screenshot:
+
+<img width="996" height="825" alt="image" src="https://github.com/user-attachments/assets/ee740c23-32ab-4e73-adca-aac8e1b59bd0" />
+
+
+---
+
+## 💡 Technologies Used in Block 4
+
+* PHP  
+* MySQL  
+* XML  
+* XSL / XSLT  
+* Bootstrap  
+* JavaScript  
+* Weather API integration  
+* MVC architecture  
+* Prepared SQL statements
 
 ---
 
