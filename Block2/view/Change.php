@@ -69,16 +69,16 @@
             </div>
             <div class="modal-body bg-light">
                 <input type="hidden" name="id" value="<?= $i->id ?>">
-                <label class="mt-3">Name</label>
+                <label class="mt-3 d-block">Name</label>
                 <input type="text" class="form-control" name="name" value="<?= $i->name ?>">
-                <label class="mt-3">Description</label>
+                <label class="mt-3 d-block">Description</label>
                 <input type="text" class="form-control" name="description" value="<?= $i->description ?>">
-                <label class="mt-3">Price</label>
+                <label class="mt-3 d-block">Price</label>
                 <input type="number" step="0.01" class="form-control" name="price" value="<?= $i->price ?>">
-                <label class="mt-3">Current Image</label>
+                <label class="mt-3 d-block">Current Image</label>
                 <input type="hidden" name="current_image" value="<?= $i->image ?>">
                     <img src="../image/<?= $i->image ?>" class="img-fluid rounded mb-2" style="height:80px;">
-                <label class="mt-3">Upload New Image (optional)</label>
+                <label class="mt-3 d-block">Upload New Image (optional)</label>
                 <input type="file" class="form-control" name="image">
             </div>
             <div class="modal-footer bg-dark rounded-bottom">
@@ -98,13 +98,13 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body bg-light">
-                <label class="mt-3">Name</label>
+                <label class="mt-3 d-block">Name</label>
                 <input type="text" class="form-control" name="name">
-                <label class="mt-3">Description</label>
+                <label class="mt-3 d-block">Description</label>
                 <input type="text" class="form-control" name="description">
-                <label class="mt-3">Price</label>
+                <label class="mt-3 d-block">Price</label>
                 <input type="number" step="0.01" class="form-control" name="price">
-                <label class="mt-3">Image (optional)</label>
+                <label class="mt-3 d-block">Image (optional)</label>
                 <input type="file" class="form-control" name="image">
             </div>
             <div class="modal-footer bg-dark rounded-bottom">
