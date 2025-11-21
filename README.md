@@ -44,7 +44,6 @@ The home page acts as a **hub** displaying four main sections:
 | **Block 4** | XML Elements          |
 
 Each opens its own project with multiple pages, stored and loaded dynamically.
-Local Setup: PHP websites require a local server (XAMPP, WAMP, MAMP, Docker) to run. Screenshots are provided to showcase the website functionality.
 
 📸 **Screenshot:**
 <img width="1291" height="804" alt="image" src="https://github.com/user-attachments/assets/1b78d608-4f71-4201-82db-e903c89d9232" />
@@ -59,7 +58,7 @@ Below are summaries for each block.
 
 # 🟦 Block 1 – Basic Dynamic Website (Avengers)
 
-📌 **A CRUD-style information system demonstrating MVC, multitable relationships, and dynamic data rendering.**
+📌 **Displays structured data from linked database tables using API functions, SQL joins, and dynamic rendering in the View layer.**
 
 ---
 
@@ -118,7 +117,9 @@ Shows:
 Smart behavior:
 
 ✔ If no images exist → shows a friendly message
+
 ✔ If articles exist → they display as clickable links
+
 ✔ Supports characters having any number of images/articles
 
 ### Database Logic
@@ -133,6 +134,9 @@ API functions used:
 * `GetAvengerByID()`
 * `GetAllImages()`
 * `GetArticles()`
+
+
+📸 Screenshot:
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/07e8815f-6f5e-41a0-883d-95f37e27d613" />
 
@@ -155,6 +159,9 @@ Database relationships:
 | Reporter → Articles | One-to-Many                       |
 | Article → Images    | One-to-Many                       |
 | Avengers ↔ Articles | Many-to-Many (via junction table) |
+
+
+📸 Screenshot:
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/28b2d228-ed89-42fb-8211-20790b0f6559" />
 
@@ -180,29 +187,302 @@ Database relationships:
 
 ---
 
-# 🟥 Block 2 – Selling Site
+# 🍣 Block 2 – Selling Site
 
-.....
+📌 **A dynamic ecommerce sushi shop with user login, admin dashboard, cart system, and CRUD management.**
 
-📌 **Description ()**
+---
 
-.......
+## 🧠 Project Concept
 
-### 📄 Pages Include
+This project simulates an online sushi store with:
 
-.....
+* User login & registration
+* Admin role with full CRUD functionality
+* Cookie-based shopping cart
+* Checkout & payment simulation
+* MVC structure (Model, View, Controller)
+* Parameterized SQL for injection prevention
+
+All display and business logic is separated cleanly into MVC folders following best practices.
+
+---
+
+### 📄 Pages in Block 2
+
+---
+
+### 1️⃣ Main Page – Sushi Menu
+
+The landing page displays all sushi items:
+
+* Name  
+* Price  
+* First 100 characters of description (`…`)  
+* Product image  
+* **Buy** button
+
+Users can:
+
+✔ Add multiple items  
+✔ Choose quantities  
+✔ Store their cart in cookies
 
 
-# 🟩 Block 3 – IoT Site
+📸 Screenshot:
 
-📌 **Description ()**
+<img width="894" height="906" alt="image" src="https://github.com/user-attachments/assets/a21169b0-8405-4985-9b71-65976fedfc13" />
 
-.......
+---
 
-### 📄 Pages Include
+### 🔐 User Registration & Login
 
-.....
+Both forms open as **popup modal windows**, not separate pages.
 
+#### Registration Validation Includes:
+
+* Matching password confirmation  
+* Strong password rules  
+* Username must be unique  
+* Friendly success or failure messages
+
+#### Header Behavior
+
+| User Type     | Header Display                                                 |
+| ------------- | -------------------------------------------------------------- |
+| Guest         | Login + Register buttons                                       |
+| Logged User   | `Hello, <username>`                                           |
+| Admin         | `Hello, <username>` + `Dashboard` button                 |
+
+
+
+📸 Screenshot:
+
+<img width="909" height="534" alt="image" src="https://github.com/user-attachments/assets/5587daee-ea50-4a4c-9a00-76574d8c483f" />
+
+📸 Screenshot:
+
+<img width="397" height="234" alt="image" src="https://github.com/user-attachments/assets/16366c15-1a5e-4337-91a7-200323dffe5a" />
+
+📸 Screenshot:
+
+<img width="898" height="50" alt="image" src="https://github.com/user-attachments/assets/823d48e0-c9bd-4883-a951-3869423c8b10" />
+
+---
+
+### 🛒 Cart Page
+
+The cart pulls stored items directly from cookies and displays:
+
+* Product image  
+* Name  
+* Quantity  
+* Price per item  
+* Line total  
+* Order total
+
+Users can:
+
+✔ Increase quantities  
+✔ Decrease quantities  
+✔ Remove individual items  
+✔ Empty the entire cart
+
+If no items exist:
+
+> “Your cart is empty.”
+
+#### Checkout Rule:
+
+* Logged-in user → `Pay` button displayed  
+* Guest user → Shown message requiring login before payment
+
+📸 Screenshot:
+
+<img width="905" height="575" alt="image" src="https://github.com/user-attachments/assets/2e701f45-4264-4c9a-aa1e-a79f1000a5f2" />
+
+---
+
+### 💳 Payment Page
+
+Shows the final list of items and pricing based on cookie data.
+
+#### Payment Workflow
+
+1. User enters card details  
+2. Input validation  
+3. Loading animation (e.g. spinning circle)  
+4. Server responds with one of two outcomes:
+
+#### ✔ Success
+* Payment accepted  
+* Cookies cleared  
+* User returned to main page with success message
+
+#### ❌ Failure
+* Declined message displayed  
+* User may retry without losing cart contents
+
+📸 Screenshot:
+
+<img width="892" height="536" alt="image" src="https://github.com/user-attachments/assets/d7b31b87-3055-42ab-8e86-61dad6700fd9" />
+
+---
+
+### 🛠 Admin Dashboard
+
+Only users with admin accounts can access this page.  
+If a non-admin attempts access:
+
+> Redirect to main page with “Access Denied.”
+
+#### Admin Functions
+
+✔ Add sushi  
+✔ Edit sushi  
+✔ Delete sushi  
+✔ View full product list
+
+Add/Edit are performed via **popup modal forms** and include:
+
+* Validation
+* Optional image upload
+* Immediate results visible in the store front end
+
+
+📸 Screenshot:
+
+<img width="899" height="577" alt="image" src="https://github.com/user-attachments/assets/7d21bac6-41b3-484a-ab91-7083c6ce2da8" />
+
+---
+
+## 💡 Technologies Used in Block 2
+
+* PHP  
+* MySQL  
+* MVC Architecture  
+* HTML / CSS  
+* Bootstrap  
+* JavaScript  
+* Cookies for persistent cart  
+* SQL prepared statements  
+* Authentication + user roles
+
+---
+
+# 🟩 Block 3 – IoT Monitoring & Control System
+
+📌 **A web interface connected to a physical IoT device, supporting real-time monitoring and remote LED control.**
+
+📸 Screenshot:
+
+<img width="909" height="911" alt="image" src="https://github.com/user-attachments/assets/9bc95393-1457-4f3d-bd9b-4607334e91d1" />
+
+---
+
+## 🧠 Project Concept
+
+This project demonstrates integration between a PHP web application and a physical IoT device.  
+The device:
+
+* Sends temperature readings (internal & external) every **5 minutes**
+* Stores data in a MySQL database
+* Receives remote web commands to control LEDs
+
+The web interface displays all data in a **single page separated into functional panels**.
+
+---
+
+## 📄 Panels in Block 3
+
+---
+
+### 1️⃣ LED Control Panel
+
+Allows users to remotely toggle:
+
+* **Green LED**
+* **Red LED**
+
+Each LED has two buttons:
+
+* **ON**
+* **OFF**
+
+When a request is successfully sent to the device:
+
+✔ Device responds  
+✔ Button changes state (example: ON button turns into OFF)  
+✔ Status updated visually
+
+📸 Screenshot:
+
+<img width="445" height="188" alt="image" src="https://github.com/user-attachments/assets/08130b6f-e09e-462f-951e-b1937149844b" />
+
+---
+
+### 2️⃣ Live Temperature Panel
+
+Displays:
+
+* **Current internal temperature**
+* **Current external temperature**
+
+Values are pulled directly from the latest device readings.
+
+📸 Screenshot:
+
+<img width="447" height="130" alt="image" src="https://github.com/user-attachments/assets/70379be9-df38-4a00-b396-82b5aa470f9f" />
+
+---
+
+### 3️⃣ Historical Data Table
+
+Shows the **last 10 recorded entries**, including:
+
+| Data | Description |
+| --- | --- |
+| Internal Temperature | °C reading |
+| External Temperature | °C reading |
+| Green LED State | ON / OFF |
+| Red LED State | ON / OFF |
+| Timestamp | Date & time of recording |
+
+### Data Collection
+
+Every 5 minutes:
+
+1. The server requests updated data from the IoT device  
+2. Device sends back temperature values and LED statuses  
+3. Data is stored into MySQL  
+4. Table dynamically refreshes to show the newest values
+
+
+📸 Screenshot:
+
+<img width="908" height="485" alt="image" src="https://github.com/user-attachments/assets/bc791c23-cfa6-4a75-aa20-ce1009818363" />
+
+---
+
+### 4️⃣ Temperature Graph Panel
+
+Displays:
+
+* Internal temperature trend
+* External temperature trend
+
+Data is plotted as a visual graph to show temperature changes over time, using values stored in the database.
+
+This allows users to:
+
+✔ Monitor environmental changes  
+✔ Compare temperature patterns  
+✔ View history visually instead of only tables
+
+
+📸 Screenshot:
+
+<img width="885" height="306" alt="image" src="https://github.com/user-attachments/assets/b8405aee-c639-4946-b5e0-70af33241d5a" />
 
 # 🟨 Block 4 – XML Elements
 
