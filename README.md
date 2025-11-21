@@ -622,6 +622,14 @@ Benefits:
 
 <img width="996" height="825" alt="image" src="https://github.com/user-attachments/assets/ee740c23-32ab-4e73-adca-aac8e1b59bd0" />
 
+📸 Screenshot:
+
+<img width="385" height="248" alt="image" src="https://github.com/user-attachments/assets/64745131-2d32-47f8-8059-7eb3a9d75840" />
+
+📸 Screenshot:
+
+<img width="491" height="382" alt="image" src="https://github.com/user-attachments/assets/b3218292-10e1-4477-b426-3fd78610942e" />
+
 
 ---
 
