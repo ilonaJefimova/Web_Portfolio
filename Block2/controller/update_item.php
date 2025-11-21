@@ -1,6 +1,6 @@
 <?php
 error_reporting (0);
-$cart = isset ($_COOKI E['cart_items_cookie']) ? json_decode (stripslashes ($_COOKIE ['cart_items_cookie']), true) : [];
+$cart = isset ($_COOKIE ['cart_items_cookie']) ? json_decode (stripslashes ($_COOKIE ['cart_items_cookie']), true) : [];
 
 $id = $_POST ['id'];
 $action = $_POST ['action'];
