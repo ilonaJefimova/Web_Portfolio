@@ -484,6 +484,22 @@ This allows users to:
 
 <img width="885" height="306" alt="image" src="https://github.com/user-attachments/assets/b8405aee-c639-4946-b5e0-70af33241d5a" />
 
+---
+
+### 💡 Technologies Used in Block 3
+
+* PHP
+* MySQL
+* Bootstrap
+* JSON API
+* JavaScript  
+* AJAX/device requests  
+* Real-time data polling  
+* MVC architecture  
+* Secure database operations
+
+---
+
 # 🟨 Block 4 – XML Elements
 
 📌 **Description ()**
