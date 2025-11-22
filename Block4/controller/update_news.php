@@ -11,10 +11,21 @@
 	// $url = $location . '/' . urlencode ($id);
 	$url = $location . '?id=' . urlencode ($id); 
 
+	$image = $_POST['current_image'];
+
+	if (!empty ($_FILES ['image'] ['name'])) 
+	{
+		$targetDir = "../image/";
+		$fileName = time () . "_" . basename ($_FILES ["image"] ["name"]);
+		$targetFile = $targetDir . $fileName;
+		move_uploaded_file ($_FILES ["image"] ["tmp_name"], $targetFile);
+		$image = $fileName;
+	}
+
 	$data = '<news>';
 	$data .= '<title>'.htmlspecialchars ($_POST ['title']).'</title>';
 	$data .= '<description>'.htmlspecialchars ($_POST ['description']).'</description>';
-	$data .= '<image>'.htmlspecialchars ($_POST ['image']).'</image>';
+	$data .= '<image>'.htmlspecialchars ($image).'</image>';
 	$data .= '<link>'.htmlspecialchars ($_POST ['link']).'</link>';
 	$data .= '</news>';
 

@@ -5,7 +5,19 @@
 	$title = isset ($_POST ['title']) ? $_POST ['title'] : '';
 	$description = isset ($_POST ['description']) ? $_POST ['description'] : '';
 	$link = isset ($_POST ['link']) ? $_POST ['link'] : '';
-	$image = 'coming_soon.png'; // default
+
+	if (!empty ($_FILES ['image'] ['name'])) 
+	{
+		$targetDir = "../image/";
+		$fileName = time () . "_" . basename ($_FILES ["image"] ["name"]);
+		$targetFile = $targetDir . $fileName;
+		move_uploaded_file ($_FILES ["image"] ["tmp_name"], $targetFile);
+		$image = $fileName;
+	} 
+	else 
+	{
+		$image = 'coming_soon.png'; // default
+	}
 
 	if (!$title || !$description || !$link) 
 	{
