@@ -259,14 +259,21 @@ Both forms open as **popup modal windows**, not separate pages.
 📸 Screenshot:
 
 <img width="909" height="534" alt="image" src="https://github.com/user-attachments/assets/5587daee-ea50-4a4c-9a00-76574d8c483f" />
+<img width="441" height="529" alt="image" src="https://github.com/user-attachments/assets/de6eb4ba-116a-4e0f-be51-5c7a7467e3c1" />
+
 
 📸 Screenshot:
 
 <img width="397" height="234" alt="image" src="https://github.com/user-attachments/assets/16366c15-1a5e-4337-91a7-200323dffe5a" />
+<img width="397" height="234" alt="image" src="https://github.com/user-attachments/assets/c8527828-9013-441a-91e1-24843d6fcfd9" />
+<img width="397" height="234" alt="image" src="https://github.com/user-attachments/assets/cdad679b-6403-4b2b-97ac-321a3f378105" />
+
 
 📸 Screenshot:
 
 <img width="898" height="50" alt="image" src="https://github.com/user-attachments/assets/823d48e0-c9bd-4883-a951-3869423c8b10" />
+<img width="898" height="50" alt="image" src="https://github.com/user-attachments/assets/7e46f17a-af08-44f8-b011-5b60e8ed019d" />
+
 
 ---
 
@@ -353,6 +360,12 @@ Add/Edit are performed via **popup modal forms** and include:
 📸 Screenshot:
 
 <img width="899" height="577" alt="image" src="https://github.com/user-attachments/assets/7d21bac6-41b3-484a-ab91-7083c6ce2da8" />
+<img width="1410" height="682" alt="image" src="https://github.com/user-attachments/assets/b855ecf1-39f9-4f93-b062-7c4bdbd74c01" />
+<img width="598" height="657" alt="image" src="https://github.com/user-attachments/assets/0830e631-d770-482d-ab54-0080a4a395a9" />
+<img width="532" height="508" alt="image" src="https://github.com/user-attachments/assets/761fde61-0c0c-42b3-b08b-eef97cda5747" />
+
+
+
 
 ---
 
@@ -584,6 +597,8 @@ A small RSS-style button is available. Clicking it:
 📸 Screenshot:
 
 <img width="332" height="71" alt="image" src="https://github.com/user-attachments/assets/ddd8b71c-7aad-4f49-9e2c-74036091d1de" />
+<img width="1916" height="908" alt="image" src="https://github.com/user-attachments/assets/444b9606-a4e3-4b5a-80bc-13d5c33a418f" />
+
 
 ---
 
