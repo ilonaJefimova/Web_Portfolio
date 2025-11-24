@@ -1,3 +1,4 @@
+<?php error_reporting (0); ?>
 <div id="loginModal" class="modal-login">
     <div class="modal-content-login">
         <span class="close" onclick="closeModal('loginModal')" style="cursor:pointer; float:right; font-size:22px;">&times;</span>

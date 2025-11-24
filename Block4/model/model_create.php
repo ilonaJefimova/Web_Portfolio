@@ -1,3 +1,4 @@
+<?php error_reporting (0); ?>
 <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <form class="modal-content shadow ounded-3" method="POST" action="../controller/insert_news.php">

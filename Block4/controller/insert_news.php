@@ -1,4 +1,5 @@
 <?php
+	error_reporting (0);
 	include ("location.php");
 
 	// Prepare XML data from POST

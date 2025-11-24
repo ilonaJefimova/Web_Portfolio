@@ -1,4 +1,5 @@
 <?php
+    error_reporting (0);
     include ("../model/header.php");
     include ("../model/API.php");
 ?>
@@ -20,10 +21,10 @@
                     $red = $ledData [0] ['value'] ?? 0;
 
                     echo '<p>Green LED: <span class="'.($green?'led-on':'led-off').'">'.($green? 'On':'Off').'</span></p>';
-                    echo '<a href="https://agent.electricimp.com/ZGdE3zT4p2b2?pin=7&state='.($green ? 0 : 1).'" target="_blank" class="btn btn-success me-2">'.($green?'Switch Off':'Switch On').'</a>';
+                    echo '<a href="https://some.link.com/example123?pin=7&state='.($green ? 0 : 1).'" target="_blank" class="btn btn-success me-2">'.($green?'Switch Off':'Switch On').'</a>';
 
                     echo '<p class="mt-3">Red LED: <span class="'.($red?'led-on':'led-off').'">'.($red?'On':'Off').'</span></p>';
-                    echo '<a href="https://agent.electricimp.com/ZGdE3zT4p2b2?pin=5&state='.($red ? 0 : 1).'" target="_blank" class="btn btn-danger">'.($red?'Switch Off':'Switch On').'</a>';
+                    echo '<a href="https://some.link.com/example123?pin=5&state='.($red ? 0 : 1).'" target="_blank" class="btn btn-danger">'.($red?'Switch Off':'Switch On').'</a>';
                 }
                 ?>
             </div>

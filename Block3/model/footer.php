@@ -1,3 +1,4 @@
+<?php error_reporting (0); ?>
 <!-- Footer -->
 </div>
 <footer class="bg-dark text-white shadow-sm mt-5">

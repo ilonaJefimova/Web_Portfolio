@@ -1,4 +1,5 @@
 <?php
+    error_reporting (0);
     include ("../model/API.php") ;
 
     $message -> message = file_get_contents ('php://input') ;

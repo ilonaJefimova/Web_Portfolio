@@ -1,4 +1,5 @@
 <?php
+    error_reporting (0);
     $cid = isset ($_GET ['cid']) ? $_GET ['cid'] : null;
     $aid = isset ($_GET ['aid']) ? $_GET ['aid'] : null;
     $type = isset ($_GET ['type']) ? $_GET ['type'] : 'individual';

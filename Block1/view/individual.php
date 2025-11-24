@@ -1,4 +1,7 @@
-<?php include ("../model/header.php"); ?>
+<?php
+    error_reporting (0);
+    include ("../model/header.php"); 
+?>
 
 <div class="container py-5" style="max-width: 70%;">
 <?php

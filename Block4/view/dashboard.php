@@ -1,5 +1,6 @@
     
  <?php
+    error_reporting (0);
     include ("../controller/location.php");
 
     $curl = curl_init ($location);

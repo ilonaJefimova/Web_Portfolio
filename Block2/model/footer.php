@@ -1,3 +1,4 @@
+<?php error_reporting (0); ?>
 </div> <!-- container -->
 
 <footer class="bg-dark text-white text-center py-3 mt-5">

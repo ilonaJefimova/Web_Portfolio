@@ -1,4 +1,7 @@
-<?php include ("../model/header.php"); ?>
+<?php
+  error_reporting (0);
+  include ("../model/header.php"); 
+?>
 
 <main class="container my-5">
   <div class="row g-4">

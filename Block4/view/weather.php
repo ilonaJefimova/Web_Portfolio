@@ -1,3 +1,4 @@
+<?php error_reporting (0); ?>
 <div class="container mb-5">
 
   <?php

@@ -1,3 +1,4 @@
+<?php error_reporting (0); ?>
 <?php foreach ($items as $n): ?>
     <div class="modal fade" id="updateModal<?= $n->id ?>" aria-labelledby="updateModalLabel" aria-hidden="true">
         <div class="modal-dialog">

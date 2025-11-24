@@ -1,5 +1,7 @@
 <?php
 
+	error_reporting (0);
+
 	// Library of methods to support the Web Service
 
 	//  function to convert a single record from database to XML

@@ -1,4 +1,5 @@
 <?php
+  error_reporting (0);
   $isAdmin = (isset ($_SESSION ["username"]) && $_SESSION ["username"] === "SuperSecretA");
 ?>
 <?php if ($isAdmin): ?>
@@ -20,8 +21,8 @@
   <div class="container action-buttons mb-4">
     <a href="../../index.php" class="btn btn-gradient">Return to Home Page</a>
     <button onclick="openModal('loginModal')" class="btn btn-gradient-outline">Login</button>
-    <!-- <a href="https://someserver.com/~place/portfolio/Block4/controller/news" class="rss-btn"> -->
-    <a href="http://localhost/portfolio/Block4/controller/news.php" class="rss-btn">
+    <!-- <a href="https://someserver.com/~place/Web_Portfolio/Block4/controller/news" class="rss-btn"> -->
+    <a href="http://localhost/Web_Portfolio/Block4/controller/news.php" class="rss-btn">
       <img src="../image/rss.png" alt="RSS Feed">
     </a>
   </div>

@@ -1,3 +1,4 @@
+  <?php error_reporting (0); ?>
   <footer class="footer mt-5 py-4 text-center">
     <div class="container">
       <p class="mb-1">myWebsite@example.com</p>

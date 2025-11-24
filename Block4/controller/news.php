@@ -1,5 +1,6 @@
 <?php
 	// Connect to database
+	error_reporting (0);
 	include ("../model/connection.php");
 	$conn =  getDatabaseConnection ();
 

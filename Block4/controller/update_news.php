@@ -1,5 +1,5 @@
 <?php
-
+	error_reporting (0);
 	$id = isset ($_POST ['id']) ? intval ($_POST ['id']) : 0;
 	if ($id <= 0) 
 	{
